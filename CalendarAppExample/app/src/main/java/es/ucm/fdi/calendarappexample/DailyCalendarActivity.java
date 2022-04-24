@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.TextStyle;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.Locale;
 
 import static es.ucm.fdi.calendarappexample.CalendarUtils.selectedDate;
 
-public class DailyCalendarActivity extends AppCompatActivity {
+public class DailyCalendarActivity extends AppCompatActivity{
     private TextView monthDayText;
     private TextView dayOfWeekTV;
     private ListView hourListView;

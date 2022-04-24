@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class CalendarUtils {
     public static LocalDate selectedDate;
+    public static LocalTime selectedTime;
 
     public static ArrayList<LocalDate> daysInMonthArray(LocalDate date) {
         ArrayList<LocalDate> daysInMonthArray = new ArrayList<>();
@@ -43,6 +44,7 @@ public class CalendarUtils {
         return days;
     }
 
+
     private static LocalDate sundayForDate(LocalDate current) {
         LocalDate oneWeekAgo = current.minusWeeks(1);
 
@@ -72,11 +74,6 @@ public class CalendarUtils {
     }
 
     public static String formattedTime(LocalTime time) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
-        return time.format(formatter);
-    }
-
-    public static String formattedShortTime(LocalTime time) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         return time.format(formatter);
     }

@@ -37,7 +37,7 @@ public class HourAdapter extends ArrayAdapter<HourEvent> {
 
     private void setHour(View convertView, LocalTime time) {
         TextView timeTV = convertView.findViewById(R.id.timeTV);
-        timeTV.setText(CalendarUtils.formattedShortTime(time));
+        timeTV.setText(CalendarUtils.formattedTime(time));
     }
 
 

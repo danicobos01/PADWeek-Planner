@@ -49,6 +49,48 @@
         android:textAlignment="center"
         android:textColor="@color/black"/>
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        <!-- empty space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!--  section 1-->
+
+        <!-- layout for time picker mm:ss AM/PM -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <NumberPicker
+                android:id="@+id/numPickerH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <NumberPicker
+                android:id="@+id/numPickerM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="#ebebeb" />
+
+
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
     <Button
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"

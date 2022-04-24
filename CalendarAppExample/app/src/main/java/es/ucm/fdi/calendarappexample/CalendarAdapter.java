@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
@@ -57,4 +58,8 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
     public interface OnItemListener {
         void onItemClick(int position, LocalDate date);
     }
+
+   /* public interface OnItemListenerHour {
+        void onItemClick2(int position, LocalTime time);
+    }*/
 }
