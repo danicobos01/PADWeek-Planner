@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tienda.TiendaMain">
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Dia"
+                style="@android:style/Widget.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="8dp"
+                android:text="Dia" />
+
+            <Button
+                android:id="@+id/Semana"
+                style="@android:style/Widget.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="Semana" />
+
+            <Button
+                android:id="@+id/Mes"
+                style="@android:style/Widget.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="Mes" />
+
+            <Button
+                android:id="@+id/Temporizador"
+                style="@android:style/Widget.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="Temp" />
+
+            <Button
+                android:id="@+id/Estadisticas"
+                style="@android:style/Widget.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="Stats" />
+
+            <Button
+                android:id="@+id/Tienda"
+                style="@android:style/Widget.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="Tienda" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/buttoninfo"
+        android:layout_width="78dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/infobutton_foreground"
+        android:onClick="onButtonShowPopupWindowClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Recompensas:"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="453dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttoninfo"
+        app:layout_constraintVertical_bias="1.0" />
+
+</LinearLayout>

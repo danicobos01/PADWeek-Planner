@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
+    tools:context=".Calendario.MonthCalendarActivity">
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
@@ -79,7 +78,7 @@
             android:textColor="@color/blue"
             android:background="@null"
             android:textStyle="bold"
-            android:onClick="previousWeekAction"
+            android:onClick="previousMonthAction"
             android:textSize="20sp"/>
 
 
@@ -91,7 +90,8 @@
             android:text="Marzo 2022"
             android:textSize="20sp"
             android:textAlignment="center"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:gravity="center_horizontal" />
 
         <Button
             android:layout_width="0dp"
@@ -101,7 +101,7 @@
             android:textColor="@color/blue"
             android:background="@null"
             android:textStyle="bold"
-            android:onClick="nextWeekAction"
+            android:onClick="nextMonthAction"
             android:textSize="20sp"/>
 
     </LinearLayout>
@@ -118,7 +118,8 @@
             android:text="SUN"
             android:textColor="@color/gray"
             android:textAlignment="center"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="0dp"
@@ -127,7 +128,8 @@
             android:text="MON"
             android:textColor="@color/gray"
             android:textAlignment="center"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="0dp"
@@ -136,7 +138,8 @@
             android:text="TUE"
             android:textColor="@color/gray"
             android:textAlignment="center"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="0dp"
@@ -145,7 +148,8 @@
             android:text="WED"
             android:textColor="@color/gray"
             android:textAlignment="center"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="0dp"
@@ -154,7 +158,8 @@
             android:text="THUR"
             android:textColor="@color/gray"
             android:textAlignment="center"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="0dp"
@@ -163,7 +168,8 @@
             android:text="FRI"
             android:textColor="@color/gray"
             android:textAlignment="center"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="0dp"
@@ -172,7 +178,8 @@
             android:text="SAT"
             android:textColor="@color/gray"
             android:textAlignment="center"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
 
 
 
@@ -181,25 +188,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/calendarRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nuevo Evento"
-        android:textColor="@color/blue"
-        android:background="@null"
-        android:textStyle="bold"
-        android:onClick="newEventAction"
-        android:layout_gravity="center"
-        android:textSize="20sp"/>
-
-    <ListView
-        android:id="@+id/eventListView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"/>
-
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
