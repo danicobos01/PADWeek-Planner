@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_semanal"
+            android:icon="@drawable/ic_menu_semanal"
+            android:title="Semana" />
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/ic_menu_calendario"
+            android:title="@string/menu_calendario" />
+
+        <item
+            android:id="@+id/nav_Temporizador"
+            android:icon="@drawable/ic_menu_temporizador"
+            android:title="@string/menu_temporizador" />
+        <item
+            android:id="@+id/nav_estadisticas"
+            android:icon="@drawable/ic_menu_estadisticas"
+            android:title="@string/menu_estadisticas" />
+        <item
+            android:id="@+id/nav_tienda"
+            android:icon="@drawable/ic_menu_tienda"
+            android:title="@string/menu_tienda" />
+    </group>
+</menu>
