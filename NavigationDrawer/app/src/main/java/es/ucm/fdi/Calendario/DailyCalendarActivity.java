@@ -21,6 +21,8 @@ import static es.ucm.fdi.Calendario.CalendarUtils.selectedDate;
 
 import es.ucm.fdi.MainActivity;
 import es.ucm.fdi.R;
+import es.ucm.fdi.TempEstad.Estadisticas;
+import es.ucm.fdi.TempEstad.TempActivity;
 import es.ucm.fdi.tienda.TiendaMain;
 
 public class DailyCalendarActivity extends AppCompatActivity{
@@ -71,14 +73,14 @@ public class DailyCalendarActivity extends AppCompatActivity{
         temp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(DailyCalendarActivity.this, TiendaMain.class));
+                startActivity(new Intent(DailyCalendarActivity.this, TempActivity.class));
             }
         });
         estad = (Button) findViewById(R.id.Estadisticas);
         estad.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(DailyCalendarActivity.this, TiendaMain.class));
+                startActivity(new Intent(DailyCalendarActivity.this, Estadisticas.class));
             }
         });
     }

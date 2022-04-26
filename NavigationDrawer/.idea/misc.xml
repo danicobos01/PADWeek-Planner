@@ -4,9 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/activity_daily_calendar.xml" value="0.11770833333333333" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/activity_estadisticas.xml" value="0.213768115942029" />
         <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/activity_mes.xml" value="0.223731884057971" />
-        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/activity_tienda.xml" value="0.2" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/activity_mes.xml" value="0.1" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/activity_splash_screen.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/activity_tienda.xml" value="0.264" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/calendar_cell.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/dialog_asignatura.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/PADWeekPlannerApi26/app/src/main/res/layout/temp_activity.xml" value="0.213768115942029" />
       </map>
     </option>
   </component>

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "32.0.0"
 
     defaultConfig {
-        applicationId "es.ucm.fdi.tienda"
+        applicationId "es.ucm.fdi"
         minSdk 26
         targetSdkVersion 32
         versionCode 1

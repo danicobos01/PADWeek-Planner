@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import es.ucm.fdi.Calendario.*;
 import es.ucm.fdi.MainActivity;
 import es.ucm.fdi.R;
+import es.ucm.fdi.TempEstad.Estadisticas;
+import es.ucm.fdi.TempEstad.TempActivity;
 import es.ucm.fdi.tienda.TiendaMain;
 
 public class MonthCalendarActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener{
@@ -71,14 +73,14 @@ public class MonthCalendarActivity extends AppCompatActivity implements Calendar
         temp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, TiendaMain.class));
+                startActivity(new Intent(MonthCalendarActivity.this, TempActivity.class));
             }
         });
         estad = (Button) findViewById(R.id.Estadisticas);
         estad.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, TiendaMain.class));
+                startActivity(new Intent(MonthCalendarActivity.this, Estadisticas.class));
             }
         });
 

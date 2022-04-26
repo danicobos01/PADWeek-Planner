@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -15,11 +16,17 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.PopupWindow;
 
 import java.util.ArrayList;
 
+import es.ucm.fdi.Calendario.DailyCalendarActivity;
+import es.ucm.fdi.Calendario.MonthCalendarActivity;
+import es.ucm.fdi.MainActivity;
 import es.ucm.fdi.R;
+import es.ucm.fdi.TempEstad.Estadisticas;
+import es.ucm.fdi.TempEstad.TempActivity;
 
 public class TiendaMain extends AppCompatActivity /* implements View.OnClickListener*/ {
 
@@ -27,6 +34,12 @@ public class TiendaMain extends AppCompatActivity /* implements View.OnClickList
     private ArrayList<RecompensaInfo> recArr;
     private RecompensasAdapter adapter;
     private DatabaseOrg dbAdapter;
+    Button dia;
+    Button semana;
+    Button mes;
+    Button tienda;
+    Button temp;
+    Button estad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +57,49 @@ public class TiendaMain extends AppCompatActivity /* implements View.OnClickList
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(this));
         adapter.notifyDataSetChanged();
+
+        tienda = (Button) findViewById(R.id.Tienda);
+        tienda.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(TiendaMain.this, TiendaMain.class));
+            }
+        });
+        dia = (Button) findViewById(R.id.Dia);
+        dia.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(TiendaMain.this, DailyCalendarActivity.class));
+            }
+        });
+        semana = (Button) findViewById(R.id.Semana);
+        semana.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(TiendaMain.this, MainActivity.class));
+            }
+        });
+        mes = (Button) findViewById(R.id.Mes);
+        mes.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(TiendaMain.this, MonthCalendarActivity.class));
+            }
+        });
+        temp = (Button) findViewById(R.id.Temporizador);
+        temp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(TiendaMain.this, TempActivity.class));
+            }
+        });
+        estad = (Button) findViewById(R.id.Estadisticas);
+        estad.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(TiendaMain.this, Estadisticas.class));
+            }
+        });
     }
 
 
