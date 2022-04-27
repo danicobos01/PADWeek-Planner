@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".tienda.TiendaMain">
+    tools:context=".TempEstad.TempActivity">
+
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
@@ -63,55 +64,53 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <HorizontalScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <ProgressBar
+            android:id="@+id/temporizador"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/circulo_temp"
+            android:progressDrawable="@drawable/circulo_temp2"
+            android:rotation="-90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.38"
+            android:layout_gravity="center"/>
+
+        <Chronometer
+            android:id="@+id/cronometro"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="@+id/temporizador"
+            app:layout_constraintEnd_toEndOf="@+id/temporizador"
+            app:layout_constraintStart_toStartOf="@+id/temporizador"
+            app:layout_constraintTop_toTopOf="@+id/temporizador"
+            android:layout_gravity="center"/>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Recompensas:"
-                android:textSize="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.075"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_monedas"
-                android:layout_width="131dp"
-                android:layout_height="51dp"
-                android:textAlignment="center"/>
+        <Button
+            android:id="@+id/comenzar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="activarDesactivarTemporizador"
+            android:text="Comenzar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/temporizador"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/temporizador"
+            app:layout_constraintTop_toBottomOf="@+id/temporizador"
+            app:layout_constraintVertical_bias="0.363" />
 
-            <Button
-                android:id="@+id/buttoninfo"
-                android:layout_width="78dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/infobutton_foreground"
-                android:onClick="onButtonShowPopupWindowClick"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.95"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler"
-        android:layout_width="match_parent"
-        android:layout_height="453dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttoninfo"
-        app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

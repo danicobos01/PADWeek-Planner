@@ -1,5 +1,8 @@
 package es.ucm.fdi.Calendario;
 
+import static es.ucm.fdi.Calendario.CalendarUtils.daysInMonthArray;
+import static es.ucm.fdi.Calendario.CalendarUtils.monthYearFromDate;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +18,11 @@ import java.util.ArrayList;
 import es.ucm.fdi.Calendario.*;
 import es.ucm.fdi.MainActivity;
 import es.ucm.fdi.R;
+import es.ucm.fdi.TempEstad.Estadisticas;
+import es.ucm.fdi.TempEstad.TempActivity;
 import es.ucm.fdi.tienda.TiendaMain;
 
-public class MonthCalendarActivity extends AppCompatActivity {
+public class MonthCalendarActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener{
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
     Button dia;
@@ -30,7 +35,8 @@ public class MonthCalendarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        setContentView(R.layout.activity_mes);
         initWidgets();
         CalendarUtils.selectedDate = LocalDate.now();
         setMonthView();
@@ -67,14 +73,14 @@ public class MonthCalendarActivity extends AppCompatActivity {
         temp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, TiendaMain.class));
+                startActivity(new Intent(MonthCalendarActivity.this, TempActivity.class));
             }
         });
         estad = (Button) findViewById(R.id.Estadisticas);
         estad.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, TiendaMain.class));
+                startActivity(new Intent(MonthCalendarActivity.this, Estadisticas.class));
             }
         });
 

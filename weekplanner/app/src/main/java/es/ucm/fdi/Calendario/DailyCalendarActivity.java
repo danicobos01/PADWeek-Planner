@@ -17,10 +17,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import static es.ucm.fdi.calendarappexample.CalendarUtils.selectedDate;
+import static es.ucm.fdi.Calendario.CalendarUtils.selectedDate;
 
 import es.ucm.fdi.MainActivity;
 import es.ucm.fdi.R;
+import es.ucm.fdi.TempEstad.Estadisticas;
+import es.ucm.fdi.TempEstad.TempActivity;
 import es.ucm.fdi.tienda.TiendaMain;
 
 public class DailyCalendarActivity extends AppCompatActivity{
@@ -50,35 +52,35 @@ public class DailyCalendarActivity extends AppCompatActivity{
         dia.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, DailyCalendarActivity.class));
+                startActivity(new Intent(DailyCalendarActivity.this, DailyCalendarActivity.class));
             }
         });
         semana = (Button) findViewById(R.id.Semana);
         semana.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, MainActivity.class));
+                startActivity(new Intent(DailyCalendarActivity.this, MainActivity.class));
             }
         });
         mes = (Button) findViewById(R.id.Mes);
         mes.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, MonthCalendarActivity.class));
+                startActivity(new Intent(DailyCalendarActivity.this, MonthCalendarActivity.class));
             }
         });
         temp = (Button) findViewById(R.id.Temporizador);
         temp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, TiendaMain.class));
+                startActivity(new Intent(DailyCalendarActivity.this, TempActivity.class));
             }
         });
         estad = (Button) findViewById(R.id.Estadisticas);
         estad.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MonthCalendarActivity.this, TiendaMain.class));
+                startActivity(new Intent(DailyCalendarActivity.this, Estadisticas.class));
             }
         });
     }

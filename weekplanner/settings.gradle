@@ -1,2 +1,2 @@
-rootProject.name = "WeekPlanner2"
+rootProject.name = "fdi"
 include ':app'

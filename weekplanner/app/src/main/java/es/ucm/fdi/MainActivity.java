@@ -1,22 +1,34 @@
 package es.ucm.fdi;
+
+
+import static es.ucm.fdi.Calendario.CalendarUtils.daysInWeekArray;
+import static es.ucm.fdi.Calendario.CalendarUtils.monthYearFromDate;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import es.ucm.fdi.R;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import es.ucm.fdi.Calendario.*;
+import es.ucm.fdi.TempEstad.DbHelper;
+import es.ucm.fdi.TempEstad.Estadisticas;
+import es.ucm.fdi.TempEstad.TempActivity;
+import es.ucm.fdi.TempEstad.Utilidades;
 import es.ucm.fdi.tienda.TiendaMain;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener{
     Button dia;
     Button semana;
     Button mes;
@@ -32,9 +44,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        DbHelper dbHelper = new DbHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        if (db == null) dbHelper.onCreate(db);
+
         initWidgets();
         CalendarUtils.selectedDate = LocalDate.now();
         setWeekView();
+
+        if (Event.eventsList.size() == 0) {
+            getEventsFromBBDD();
+        }
 
         tienda = (Button) findViewById(R.id.Tienda);
         tienda.setOnClickListener(new View.OnClickListener(){
@@ -68,14 +88,14 @@ public class MainActivity extends AppCompatActivity {
         temp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MainActivity.this, TiendaMain.class));
+                startActivity(new Intent(MainActivity.this, TempActivity.class));
             }
         });
         estad = (Button) findViewById(R.id.Estadisticas);
         estad.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MainActivity.this, TiendaMain.class));
+                startActivity(new Intent(MainActivity.this, Estadisticas.class));
             }
         });
     }
@@ -127,6 +147,35 @@ public class MainActivity extends AppCompatActivity {
 
     public void newEventAction(View view) {
         startActivity(new Intent(this, EventEditActivity.class));
+    }
+
+    private void getEventsFromBBDD() {
+        DbHelper dbHelper = new DbHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        if (db == null) {
+            Toast.makeText(this, "Error al conectar con la BBDD", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            String query = "SELECT * FROM " + Utilidades.TABLA_EVENTOS;
+            Cursor c = db.rawQuery(query, null);
+            if (!c.moveToFirst()) {
+                Toast.makeText(this, "No se han encontrado eventos en la BD", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                do {
+                    String nombre = c.getString(0);
+                    String fecha = c.getString(1);
+                    String hora = c.getString(2);
+                    String[] anoYmesYdia = fecha.split(":");
+                    String[] horaYmin = hora.split(":");
+                    LocalTime time = LocalTime.of(Integer.parseInt(horaYmin[0]), Integer.parseInt(horaYmin[1]));
+                    LocalDate date = LocalDate.of(Integer.parseInt(anoYmesYdia[0]), Integer.parseInt(anoYmesYdia[1]), Integer.parseInt(anoYmesYdia[2]));
+                    Event event = new Event(nombre, date, time);
+                    Event.eventsList.add(event);
+                } while (c.moveToNext());
+            }
+            db.close();
+        }
     }
 
 

@@ -1,4 +1,4 @@
-package es.ucm.fdi.tienda;
+package es.ucm.fdi;
 
 import android.content.Context;
 
