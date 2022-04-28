@@ -16,6 +16,7 @@ import java.time.LocalTime;
 import es.ucm.fdi.R;
 import es.ucm.fdi.TempEstad.DbHelper;
 import es.ucm.fdi.TempEstad.Utilidades;
+import es.ucm.fdi.tienda.ThemeUtils;
 
 public class EventEditActivity extends AppCompatActivity {
     private EditText eventNameET;
@@ -27,6 +28,7 @@ public class EventEditActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_event_edit);
         initWidgets();
 

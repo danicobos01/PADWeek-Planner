@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -46,6 +47,9 @@ public class TiendaMain extends AppCompatActivity /* implements View.OnClickList
     Button tienda;
     Button temp;
     Button estad;
+    static TextView tv_monedas;
+
+    private int monedas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +60,9 @@ public class TiendaMain extends AppCompatActivity /* implements View.OnClickList
         dbAdapter = new DatabaseOrg(getApplicationContext());
         recArr = new ArrayList<RecompensaInfo>();
         recArr = dbAdapter.leerRecompensasFromDB();
-        adapter = new RecompensasAdapter(recArr, this, dbAdapter);
+        tv_monedas = findViewById(R.id.tv_monedas);
+        getMonedasFromBD();
+        adapter = new RecompensasAdapter(recArr, this, dbAdapter, monedas);
 
 
         rv = findViewById(R.id.recycler);
@@ -64,7 +70,6 @@ public class TiendaMain extends AppCompatActivity /* implements View.OnClickList
         rv.setLayoutManager(new LinearLayoutManager(this));
         adapter.notifyDataSetChanged();
 
-        getMonedasFromBD();
 
         tienda = (Button) findViewById(R.id.Tienda);
         tienda.setOnClickListener(new View.OnClickListener(){
@@ -122,12 +127,12 @@ public class TiendaMain extends AppCompatActivity /* implements View.OnClickList
             String query = "SELECT * FROM " + Utilidades.TABLA_MONEDAS;
             Cursor c = db.rawQuery(query, null);
             if (!c.moveToFirst()) {
-                TextView tv_monedas = findViewById(R.id.tv_monedas);
+                monedas = 0;
                 tv_monedas.setText("0 PC");
             }
             else {
-                TextView tv_monedas = findViewById(R.id.tv_monedas);
-                tv_monedas.setText("" + c.getInt(0) + " PC");
+                monedas = c.getInt(0);
+                tv_monedas.setText("" + monedas + " PC");
             }
             db.close();
         }
@@ -172,6 +177,23 @@ public class TiendaMain extends AppCompatActivity /* implements View.OnClickList
                 return true;
             }
         });
+    }
+
+    public static void cambiarMonedasToBD(int monedas, Context context) {
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        if (db == null) {
+            Toast.makeText(context, "Error al conectar con la BBDD", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            ContentValues cv = new ContentValues();
+            cv.put(Utilidades.MONEDAS_CANTIDAD, monedas);
+            int rows = db.update(Utilidades.TABLA_MONEDAS, cv, null, null);
+            if (rows < 1) {
+                Toast.makeText(context, "No se han cambiado las monedas en la BD", Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
 
 }

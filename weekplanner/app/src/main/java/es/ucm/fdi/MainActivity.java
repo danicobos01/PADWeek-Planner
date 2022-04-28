@@ -26,6 +26,7 @@ import es.ucm.fdi.TempEstad.DbHelper;
 import es.ucm.fdi.TempEstad.Estadisticas;
 import es.ucm.fdi.TempEstad.TempActivity;
 import es.ucm.fdi.TempEstad.Utilidades;
+import es.ucm.fdi.tienda.ThemeUtils;
 import es.ucm.fdi.tienda.TiendaMain;
 
 public class MainActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener{
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_main);
 
         DbHelper dbHelper = new DbHelper(this);
@@ -158,10 +160,7 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
         else {
             String query = "SELECT * FROM " + Utilidades.TABLA_EVENTOS;
             Cursor c = db.rawQuery(query, null);
-            if (!c.moveToFirst()) {
-                Toast.makeText(this, "No se han encontrado eventos en la BD", Toast.LENGTH_SHORT).show();
-            }
-            else {
+            if (c.moveToFirst()) {
                 do {
                     String nombre = c.getString(0);
                     String fecha = c.getString(1);

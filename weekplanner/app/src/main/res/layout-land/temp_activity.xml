@@ -8,69 +8,64 @@
     android:orientation="vertical"
     tools:context=".TempEstad.TempActivity">
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal"
+        android:weightSum="6">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+        <Button
+            android:id="@+id/Dia"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:text="Dia" />
 
-            <Button
-                android:id="@+id/Dia"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:layout_marginBottom="8dp"
-                android:text="Dia" />
+        <Button
+            android:id="@+id/Semana"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Semana" />
 
-            <Button
-                android:id="@+id/Semana"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Semana" />
+        <Button
+            android:id="@+id/Mes"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Mes" />
 
-            <Button
-                android:id="@+id/Mes"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Mes" />
+        <Button
+            android:id="@+id/Temporizador"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Temp" />
 
-            <Button
-                android:id="@+id/Temporizador"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Temp" />
+        <Button
+            android:id="@+id/Estadisticas"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Stats" />
 
-            <Button
-                android:id="@+id/Estadisticas"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Stats" />
+        <Button
+            android:id="@+id/Tienda"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Tienda" />
 
-            <Button
-                android:id="@+id/Tienda"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Tienda" />
-        </LinearLayout>
-    </HorizontalScrollView>
+    </LinearLayout>
 
-
+    
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -78,8 +73,9 @@
         <ProgressBar
             android:id="@+id/temporizador"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="32dp"
             android:background="@drawable/circulo_temp"
             android:progressDrawable="@drawable/circulo_temp2"
@@ -89,8 +85,7 @@
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.38"
-            android:layout_gravity="center"/>
+            app:layout_constraintVertical_bias="0.13" />
 
         <Chronometer
             android:id="@+id/cronometro"

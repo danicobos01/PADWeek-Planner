@@ -20,6 +20,7 @@ import es.ucm.fdi.MainActivity;
 import es.ucm.fdi.R;
 import es.ucm.fdi.TempEstad.Estadisticas;
 import es.ucm.fdi.TempEstad.TempActivity;
+import es.ucm.fdi.tienda.ThemeUtils;
 import es.ucm.fdi.tienda.TiendaMain;
 
 public class MonthCalendarActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener{
@@ -36,6 +37,7 @@ public class MonthCalendarActivity extends AppCompatActivity implements Calendar
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        ThemeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_mes);
         initWidgets();
         CalendarUtils.selectedDate = LocalDate.now();

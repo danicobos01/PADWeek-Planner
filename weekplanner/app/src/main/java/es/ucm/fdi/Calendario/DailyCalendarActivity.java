@@ -23,6 +23,7 @@ import es.ucm.fdi.MainActivity;
 import es.ucm.fdi.R;
 import es.ucm.fdi.TempEstad.Estadisticas;
 import es.ucm.fdi.TempEstad.TempActivity;
+import es.ucm.fdi.tienda.ThemeUtils;
 import es.ucm.fdi.tienda.TiendaMain;
 
 public class DailyCalendarActivity extends AppCompatActivity{
@@ -38,6 +39,7 @@ public class DailyCalendarActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_daily_calendar);
         initWidgets();
 

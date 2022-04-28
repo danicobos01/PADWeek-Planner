@@ -7,84 +7,80 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Calendario.MonthCalendarActivity">
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal"
+        android:weightSum="6">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+        <Button
+            android:id="@+id/Dia"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:text="Dia" />
 
-            <Button
-                android:id="@+id/Dia"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:layout_marginBottom="8dp"
-                android:text="Dia" />
+        <Button
+            android:id="@+id/Semana"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Semana" />
 
-            <Button
-                android:id="@+id/Semana"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Semana" />
+        <Button
+            android:id="@+id/Mes"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Mes" />
 
-            <Button
-                android:id="@+id/Mes"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Mes" />
+        <Button
+            android:id="@+id/Temporizador"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Temp" />
 
-            <Button
-                android:id="@+id/Temporizador"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Temp" />
+        <Button
+            android:id="@+id/Estadisticas"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Stats" />
 
-            <Button
-                android:id="@+id/Estadisticas"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Stats" />
+        <Button
+            android:id="@+id/Tienda"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="Tienda" />
 
-            <Button
-                android:id="@+id/Tienda"
-                style="@android:style/Widget.Button"
-                android:minWidth="80dp"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:text="Tienda" />
-        </LinearLayout>
-    </HorizontalScrollView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/back"
             android:background="@null"
-            android:textStyle="bold"
             android:onClick="previousMonthAction"
-            android:textSize="20sp"/>
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
         <TextView
@@ -102,11 +98,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/forward"
             android:background="@null"
-            android:textStyle="bold"
             android:onClick="nextMonthAction"
-            android:textSize="20sp"/>
+            android:text="@string/forward"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

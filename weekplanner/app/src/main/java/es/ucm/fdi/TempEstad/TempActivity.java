@@ -23,6 +23,7 @@ import es.ucm.fdi.Calendario.DailyCalendarActivity;
 import es.ucm.fdi.Calendario.MonthCalendarActivity;
 import es.ucm.fdi.MainActivity;
 import es.ucm.fdi.R;
+import es.ucm.fdi.tienda.ThemeUtils;
 import es.ucm.fdi.tienda.TiendaMain;
 
 public class TempActivity extends AppCompatActivity {
@@ -50,6 +51,7 @@ public class TempActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.temp_activity);
 
         bar = findViewById(R.id.temporizador);

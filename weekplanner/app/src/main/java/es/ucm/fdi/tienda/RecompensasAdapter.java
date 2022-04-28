@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,11 +28,13 @@ public class RecompensasAdapter extends RecyclerView.Adapter<RecompensasAdapter.
     public ArrayList<RecompensaInfo> recData;
     public Context context;
     private DatabaseOrg dbAdapter;
+    private int monedas;
 
-    public RecompensasAdapter(ArrayList<RecompensaInfo> recData, Context context, DatabaseOrg dbAdapter) {
+    public RecompensasAdapter(ArrayList<RecompensaInfo> recData, Context context, DatabaseOrg dbAdapter, int curMonedas) {
         this.recData = recData;
         this.context = context;
         this.dbAdapter = dbAdapter;
+        this.monedas = curMonedas;
     }
 
 
@@ -129,17 +132,22 @@ public class RecompensasAdapter extends RecyclerView.Adapter<RecompensasAdapter.
 
                                 }
                                 */
+                                if (monedas > recData.get(pos).getPlannerCoins()) {
+                                    // Modificamos la tabla
+                                    dbAdapter.modificarTabla(pos);
+                                    int d = Log.d("onClick confirmación", "Queremos modificar la card view nª" + String.valueOf(pos) + rec.getNombre());
 
-                                // Modificamos la tabla
-                                dbAdapter.modificarTabla(pos);
-                                int d = Log.d("onClick confirmación", "Queremos modificar la card view nª" + String.valueOf(pos) + rec.getNombre());
+                                    // Actualizamos el array
+                                    recData = dbAdapter.leerRecompensasFromDB();
+                                    textAdquirida.setText("Comprada");
 
-                                // Actualizamos el array
-                                recData = dbAdapter.leerRecompensasFromDB();
-                                textAdquirida.setText("Comprada");
-
-                                // Actualizamos el recycler
-                                notifyDataSetChanged();
+                                    // Actualizamos el recycler
+                                    notifyDataSetChanged();
+                                    TiendaMain.cambiarMonedasToBD(monedas - recData.get(pos).getPlannerCoins(), context);
+                                }
+                                else {
+                                    Toast.makeText(context, "No tienes suficientes PCs", Toast.LENGTH_SHORT).show();
+                                }
 
                             }
                         });

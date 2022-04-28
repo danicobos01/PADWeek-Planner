@@ -21,7 +21,8 @@
             <Button
                 android:id="@+id/Dia"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_marginBottom="8dp"
                 android:text="Dia" />
@@ -29,55 +30,56 @@
             <Button
                 android:id="@+id/Semana"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Semana" />
 
             <Button
                 android:id="@+id/Mes"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Mes" />
 
             <Button
                 android:id="@+id/Temporizador"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Temp" />
 
             <Button
                 android:id="@+id/Estadisticas"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Stats" />
 
             <Button
                 android:id="@+id/Tienda"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Tienda" />
         </LinearLayout>
     </HorizontalScrollView>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
                 android:text="Recompensas:"
                 android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.075"
                 app:layout_constraintStart_toStartOf="parent"
@@ -87,27 +89,32 @@
                 android:id="@+id/tv_monedas"
                 android:layout_width="131dp"
                 android:layout_height="51dp"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttoninfo"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/buttoninfo"
                 android:layout_width="78dp"
                 android:layout_height="75dp"
-                android:layout_marginTop="4dp"
                 android:background="@drawable/infobutton_foreground"
                 android:onClick="onButtonShowPopupWindowClick"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintHorizontal_bias="0.951"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        </LinearLayout>
-    </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="453dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
