@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 import java.util.ArrayList;
@@ -23,6 +25,7 @@ import es.ucm.fdi.R;
 
 import es.ucm.fdi.TempEstad.DbHelper;
 import es.ucm.fdi.TempEstad.Utilidades;
+import es.ucm.fdi.tienda.ThemeUtils;
 import es.ucm.fdi.tienda.TiendaMain;
 import lecho.lib.hellocharts.listener.PieChartOnValueSelectListener;
 import lecho.lib.hellocharts.model.PieChartData;
@@ -37,27 +40,30 @@ public class Estadisticas extends AppCompatActivity {
     Button temp;
     Button estad;
 
-    private PieChartView pieChart;
 
-    private ArrayList<String> asignaturas;
-    private ArrayList<Integer> tiempos;
+    private ArrayList<Asignatura> asignaturas;
 
-    private TextView tv_asignatura;
-    private TextView tv_tiempo;
+    private RecyclerView rv;
+    private int maxTiempo;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_estadisticas);
 
-        asignaturas = new ArrayList<String>();
-        tiempos = new ArrayList<Integer>();
+        asignaturas = new ArrayList<Asignatura>();
+        maxTiempo = 0;
 
-        tv_asignatura = findViewById(R.id.tv_asignatura);
-        tv_tiempo = findViewById(R.id.tv_tiempo);
-
-        pieChart = (PieChartView) findViewById(R.id.graphic_pie_chart);
         rellenarAsignaturas();
-        rellenarPieChart();
+
+        if (maxTiempo != 0) {
+
+            rv = findViewById(R.id.rv_estadisticas);
+            AsignaturasAdapter adapter = new AsignaturasAdapter(asignaturas, this, maxTiempo);
+            rv.setAdapter(adapter);
+            rv.setLayoutManager(new LinearLayoutManager(this));
+
+        }
 
         tienda = (Button) findViewById(R.id.Tienda);
         tienda.setOnClickListener(new View.OnClickListener(){
@@ -113,13 +119,19 @@ public class Estadisticas extends AppCompatActivity {
         else {
             Cursor c = db.rawQuery("SELECT * FROM " + Utilidades.TABLA_ASIGNATURAS, null);
             if (!c.moveToFirst()) Toast.makeText(this, "No se han encontrado asignaturas", Toast.LENGTH_SHORT).show();
-            do {
-                asignaturas.add(c.getString(c.getColumnIndex(Utilidades.ASIGNATURA_NOMBRE)));
-                tiempos.add(c.getInt(c.getColumnIndex(Utilidades.ASIGNATURA_TIEMPO)));
-            } while (c.moveToNext());
+            else {
+                do {
+                    String nombre = c.getString(c.getColumnIndex(Utilidades.ASIGNATURA_NOMBRE));
+                    int tiempo = c.getInt(c.getColumnIndex(Utilidades.ASIGNATURA_TIEMPO));
+                    if (maxTiempo < tiempo) maxTiempo = tiempo;
+                    Asignatura asignatura = new Asignatura(nombre, tiempo);
+                    asignaturas.add(asignatura);
+                } while (c.moveToNext());
+            }
         }
     }
 
+    /*
     private void rellenarPieChart() {
         //Lista de valores
         ArrayList<SliceValue> values = new ArrayList<SliceValue>();
@@ -174,5 +186,5 @@ public class Estadisticas extends AppCompatActivity {
         });
 
     }
-
+    */
 }

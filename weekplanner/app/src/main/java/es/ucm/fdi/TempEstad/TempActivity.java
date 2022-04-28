@@ -118,8 +118,8 @@ public class TempActivity extends AppCompatActivity {
     public void aEstadisticas(View view) {
         if (comprobarAsignatura()) {
             contabilizarMonedas();
-            //Intent i = new Intent(this, Estadisticas.class);
-            //startActivity(i);
+            Intent i = new Intent(this, Estadisticas.class);
+            startActivity(i);
         }
     }
 
@@ -207,7 +207,6 @@ public class TempActivity extends AppCompatActivity {
                         null
                 );
                 if (!c.moveToFirst()) {
-                    Toast.makeText(this, "No se han encontrado asignaturas con ese nombre", Toast.LENGTH_SHORT).show();
                     if (registrarEstudio(asignatura_str)) {
                         db.close();
                         return true;
@@ -252,7 +251,6 @@ public class TempActivity extends AppCompatActivity {
                 return false;
             }
             else {
-                Toast.makeText(this, "Se ha insertado la asignatura", Toast.LENGTH_SHORT).show();
                 dialog.cancel();
                 db.close();
                 return true;
@@ -273,7 +271,6 @@ public class TempActivity extends AppCompatActivity {
             cv.put(Utilidades.ASIGNATURA_TIEMPO, elapsedSeconds + tiempo);
             String[] args = new String[]{asignatura};
             int idResultante = db.update(Utilidades.TABLA_ASIGNATURAS, cv, Utilidades.ASIGNATURA_NOMBRE + "=?", args);
-            Toast.makeText(this, "Se han actualizado " + idResultante + " asignaturas", Toast.LENGTH_LONG).show();
             db.close();
             if (idResultante == 0) return false;
             else return true;

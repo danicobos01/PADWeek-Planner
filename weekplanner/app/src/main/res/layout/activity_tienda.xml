@@ -88,12 +88,14 @@
             <TextView
                 android:id="@+id/tv_monedas"
                 android:layout_width="131dp"
-                android:layout_height="51dp"
+                android:layout_height="wrap_content"
                 android:textAlignment="center"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/buttoninfo"
                 app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6" />
 
             <Button
                 android:id="@+id/buttoninfo"

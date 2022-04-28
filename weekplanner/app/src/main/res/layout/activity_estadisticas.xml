@@ -20,7 +20,8 @@
             <Button
                 android:id="@+id/Dia"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_marginBottom="8dp"
                 android:text="Dia" />
@@ -28,6 +29,7 @@
             <Button
                 android:id="@+id/Semana"
                 style="@android:style/Widget.Button"
+                android:minWidth="80dp"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Semana"
@@ -36,75 +38,44 @@
             <Button
                 android:id="@+id/Mes"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Mes" />
 
             <Button
                 android:id="@+id/Temporizador"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Temp" />
 
             <Button
                 android:id="@+id/Estadisticas"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Stats" />
 
             <Button
                 android:id="@+id/Tienda"
                 style="@android:style/Widget.Button"
-                android:layout_width="80dp"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:text="Tienda" />
         </LinearLayout>
     </HorizontalScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_estadisticas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <lecho.lib.hellocharts.view.PieChartView
-            android:id="@+id/graphic_pie_chart"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.826" />
-
-        <TextView
-            android:id="@+id/tv_asignatura"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/graphic_pie_chart"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/graphic_pie_chart"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
-
-        <TextView
-            android:id="@+id/tv_tiempo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/graphic_pie_chart"
-            app:layout_constraintEnd_toEndOf="@+id/tv_asignatura"
-            app:layout_constraintStart_toStartOf="@+id/tv_asignatura"
-            app:layout_constraintTop_toBottomOf="@+id/tv_asignatura"
-            app:layout_constraintVertical_bias="0.45" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>
