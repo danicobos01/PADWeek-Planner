@@ -1,0 +1,170 @@
+[
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mes.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\activity_mes.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_temp_activity.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout-land\\temp_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_temp_activity.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\temp_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_mes.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout-land\\activity_mes.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_event_cell.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\event_cell.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circulo_temp.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable\\circulo_temp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_main.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout-land\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_asignatura.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\dialog_asignatura.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_estadisticas.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\activity_estadisticas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_daily_calendar.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout-land\\activity_daily_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_noads.jpg.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\noads.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_rojo.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\rojo.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_card_view_asignatura.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\card_view_asignatura.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_popup_window.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\popup_window.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_azul.jpg.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\azul.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_tienda.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout-land\\activity_tienda.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_calendar_cell.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\calendar_cell.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_infobutton_foreground.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\infobutton_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_daily_calendar.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\activity_daily_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_amarillo.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\amarillo.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_morado.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\morado.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_card_view.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\card_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_event_edit.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout-land\\activity_event_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_hour_cell.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\hour_cell.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_verde.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\verde.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_tienda.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\activity_tienda.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splashscreen.jpg.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable\\splashscreen.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_estadisticas.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout-land\\activity_estadisticas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circulo_temp2.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable\\circulo_temp2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_event_edit.xml.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\layout\\activity_event_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_modonocturno.jpg.flat",
+        "source": "C:\\Users\\Pablo\\AndroidStudioProjects\\WeekPlanner\\app\\src\\main\\res\\drawable-v24\\modonocturno.jpg"
+    }
+]
