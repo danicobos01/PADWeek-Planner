@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Dia"
+                style="@android:style/Widget.Button"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginBottom="8dp"
+                android:text="Dia" />
+
+            <Button
+                android:id="@+id/Semana"
+                style="@android:style/Widget.Button"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:text="Semana"
+                tools:minWidth="80dp" />
+
+            <Button
+                android:id="@+id/Mes"
+                style="@android:style/Widget.Button"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:text="Mes" />
+
+            <Button
+                android:id="@+id/Temporizador"
+                style="@android:style/Widget.Button"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:text="Temp" />
+
+            <Button
+                android:id="@+id/Estadisticas"
+                style="@android:style/Widget.Button"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:text="Stats" />
+
+            <Button
+                android:id="@+id/Tienda"
+                style="@android:style/Widget.Button"
+                android:minWidth="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:text="Tienda" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_estadisticas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>
